@@ -33,8 +33,8 @@ if command:
         st.session_state.message.append({"role":"USER","message":command})
     if "hello" in command or "hi" in command:
         with st.chat_message("BOT"):
-            st.write("Hi otaku!!, how are you?, need a anime  recommendation  , ask me im here for you")
-            st.session_state.message.append({"role":"BOT","message":"Hi otaku!!, how are you?, need a anime  recommendation  , ask me im here for you"})
+            st.write("Hi otaku!!, how are you? need a anime recommendation, ask me im here for you")
+            st.session_state.message.append({"role":"BOT","message":"Hi otaku!, how are you? need an anime recommendation, ask me im here for you"})
     elif "who" in command:
         with st.chat_message("BOT"):
             st.write("Im CMA AI Assistant")
