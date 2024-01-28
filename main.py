@@ -31,7 +31,7 @@ if command:
     with st.chat_message("USER"):
         st.write(command)
         st.session_state.message.append({"role":"USER","message":command})
-    if "hello" in command or "hi" in command:
+    if "hello" in command:
         with st.chat_message("BOT"):
             st.write("Hi otaku!, how are you? need an anime recommendation, ask me im here for you")
             st.session_state.message.append({"role":"BOT","message":"Hi otaku!, how are you? need an anime recommendation, ask me im here for you"})
