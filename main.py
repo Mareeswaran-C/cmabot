@@ -9,7 +9,7 @@ def ai(txt):
         if 'generateContent' in m.supported_generation_methods:
             print(m.name)
     model = genai.GenerativeModel('gemini-pro')
-    response = model.generate_content("from now your name is CMA , Iam a Anime AI Assistant  , your real name is mareeswaran and reply to this in short: "+txt)
+    response = model.generate_content("from now your name is CMA , Iam a Anime AI Assistant and i can recommand any anime, your real name is mareeswaran and reply to this in short: "+txt)
     return response.text
 
 
