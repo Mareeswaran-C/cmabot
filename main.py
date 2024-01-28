@@ -9,13 +9,13 @@ def ai(txt):
         if 'generateContent' in m.supported_generation_methods:
             print(m.name)
     model = genai.GenerativeModel('gemini-pro')
-    response = model.generate_content("from now your name is CMA , Iam a Anime AI Assistant and i can recommand any anime, your real name is mareeswaran and reply to this in short: "+txt)
+    response = model.generate_content("from now your name is CMA , you are  an AI Assistant, your real name is mareeswaran and reply to this in short: "+txt)
     return response.text
 
 
 
 
-st.title("CMA Anime Ai Assistant")
+st.title("CMA Ai Assistant")
 
 command = st.chat_input("how can I help you?")
 
@@ -33,8 +33,8 @@ if command:
         st.session_state.message.append({"role":"USER","message":command})
     if "hello" in command:
         with st.chat_message("BOT"):
-            st.write("Hi otaku!, how are you? need an anime recommendation, ask me im here for you")
-            st.session_state.message.append({"role":"BOT","message":"Hi otaku!, how are you? need an anime recommendation, ask me im here for you"})
+            st.write("Hi! how are you?")
+            st.session_state.message.append({"role":"BOT","message":"Hi! here for you"})
     elif "who" in command:
         with st.chat_message("BOT"):
             st.write("Im CMA AI Assistant")
