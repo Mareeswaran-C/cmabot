@@ -1,8 +1,8 @@
 import streamlit as st
 import google.generativeai as genai
 
+genai.configure(api_key=st.secrets["gemini_api"])
 
-genai.configure(api_key="AIzaSyChL20JopmfHbnVcF59Yoc98jx7x2YhwQE")
 def ai(txt):
     
     for m in genai.list_models():
